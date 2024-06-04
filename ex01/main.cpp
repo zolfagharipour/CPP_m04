@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 09:44:13 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/04 15:55:48 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/04 18:04:40 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,46 +18,24 @@
 
 int main()
 {
-    const Animal* animal = new Animal();
-    std::cout << "TYPE: " << animal->getType() << '\n';
-    std::cout << "SOUND: ";
-    animal->makeSound();
-    delete animal;    
-    std::cout << "--------------------------" << std::endl;
+    Dog basic;
+    Dog tmp = basic;
+    // delete &basic;
+    // Animal*     animals[10];
     
     
-    const Animal* cat = new Cat();
-    std::cout << "TYPE: " << cat->getType() << '\n';
-    std::cout << "SOUND: ";
-    cat->makeSound();
-    delete cat;    
-    std::cout << "--------------------------" << std::endl;
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     animals[i] = new Cat();
+    // }
+    // for (int j = 5; j < 10; j++)
+    // {
+    //     animals[j] = new Dog();
+    // }
     
-
-    const Animal* dog = new Dog();
-    std::cout << "TYPE: " << dog->getType() << '\n';
-    std::cout << "SOUND: ";
-    dog->makeSound();
-    delete dog;    
-    std::cout << "--------------------------" << std::endl;
-    
-
-
-    const WrongAnimal* wAnimal = new WrongAnimal();
-    std::cout << "TYPE: " << wAnimal->getType() << '\n';
-    std::cout << "SOUND: ";
-    wAnimal->makeSound();
-    delete wAnimal;    
-    std::cout << "--------------------------" << std::endl;
-    
-
-    const WrongAnimal* wCat = new WrongCat();
-    std::cout << "TYPE: " << wCat->getType() << '\n';
-    std::cout << "SOUND: ";
-    wCat->makeSound();
-    delete wCat;    
-    std::cout << "--------------------------" << std::endl;
-    
-
+    // for (int k = 0; k < 10; k++)
+    // {
+    //     delete animals[k];
+    // }
 }
 

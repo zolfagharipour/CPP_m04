@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 16:13:03 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/04 16:13:52 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/04 17:50:03 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,16 @@
 class Brain
 {
 private:
-    /* data */
+    std::string     _ideas[100];
 public:
-    Brain(/* args */);
-    ~Brain();
+    Brain( void );
+    Brain( const Brain& other );
+    Brain& operator=( const Brain& other );
+    ~Brain( void );
+
+    void        setIdea( int i, std::string idea );
+    std::string getIdea( int i);
 };
-
-Brain::Brain(/* args */)
-{
-}
-
-Brain::~Brain()
-{
-}
-
 
 
 #endif

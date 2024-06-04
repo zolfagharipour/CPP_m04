@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:57:54 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/04 16:04:16 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/04 17:26:22 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 Cat::Cat( void ) : Animal()
 {
-    _type = "Cat";
     std::cout << "A Cat has been born!" << std::endl;
+    _type = "Cat";
+    _brain = new Brain();
 }
 
 Cat::~Cat( void )
 {
+    delete _brain;
     std::cout << "Cat has died!" << std::endl;
 }
 
