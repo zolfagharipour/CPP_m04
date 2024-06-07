@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/22 12:06:03 by mzolfagh          #+#    #+#              #
-#    Updated: 2024/05/26 20:44:39 by mzolfagh         ###   ########.fr        #
+#    Created: 2024/06/04 09:28:30 by mzolfagh          #+#    #+#              #
+#    Updated: 2024/06/07 18:14:25 by mzolfagh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = DiamondTrap
+NAME = Abstract
 
-SRCS =  ClapTrap.cpp main.cpp FragTrap.cpp ScavTrap.cpp
+SRCS =  main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

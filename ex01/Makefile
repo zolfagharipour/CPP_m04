@@ -6,14 +6,14 @@
 #    By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 09:28:30 by mzolfagh          #+#    #+#              #
-#    Updated: 2024/06/04 16:12:51 by mzolfagh         ###   ########.fr        #
+#    Updated: 2024/06/07 18:10:59 by mzolfagh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = WorldOnFire
 
-SRCS =  main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS =  main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

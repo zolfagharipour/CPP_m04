@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:57:46 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/07 18:12:42 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/07 18:13:55 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ std::string     Animal::getType( void ) const
 }
 
 
-void    Animal::makeSound( void ) const
-{
-    std::cout << "Unrecognizable Animal sounds." << std::endl;
-}
+// void    Animal::makeSound( void ) const
+// {
+//     std::cout << "Unrecognizable Animal sounds." << std::endl;
+// }

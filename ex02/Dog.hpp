@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 15:58:23 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/04 16:05:48 by mzolfagh         ###   ########.fr       */
+/*   Created: 2024/06/04 10:09:50 by mzolfagh          #+#    #+#             */
+/*   Updated: 2024/06/07 15:21:42 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-WrongCat::WrongCat( void ) : WrongAnimal()
-{
-    std::cout << "A WrongCat has been born!" << std::endl;
-    _type = "WrongCat";
-}
+# include "Animal.hpp"
+#include "Brain.hpp"
 
-WrongCat::~WrongCat()
+class Dog : public Animal
 {
-    std::cout << "A WrongCat has died!" << std::endl;
-}
+private:
+    Brain*  _brain;
+    
+public:
+    Dog( void );
+    Dog( const Dog& other );
+    Dog& operator=( const Dog& other );
+    ~Dog( void );
 
-void    WrongCat::makeSound( void ) const
-{
-    std::cout << "Meeooowwaahhahahaahaha..." << std::endl;
-}
+    void        makeSound( void ) const;
+    void        steIdea( int i, std::string idea );
+    std::string getIdea ( int i );
+
+};
+
+
+#endif

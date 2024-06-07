@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 15:13:52 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/04 16:09:18 by mzolfagh         ###   ########.fr       */
+/*   Created: 2024/06/04 09:41:17 by mzolfagh          #+#    #+#             */
+/*   Updated: 2024/06/07 15:23:54 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include <string>
-# include <iostream>
+# include "Animal.hpp"
+# include "Brain.hpp"
 
 
-class WrongAnimal
+class Cat : public Animal
 {
-protected:
-    std::string     _type;
-    
+private:
+    Brain*  _brain;
 public:
-    WrongAnimal( void );
-    WrongAnimal( const WrongAnimal& other );
-    WrongAnimal& operator=( const WrongAnimal& other );
-    virtual ~WrongAnimal( void );
+    Cat( void );
+    Cat( const Cat& other );
+    Cat& operator=( const Cat& other );
+    ~Cat( void );
 
-    std::string     getType( void )const;
-    virtual void    makeSound( void )const;
+    void        makeSound( void ) const;
+    void        steIdea( int i, std::string idea );
+    std::string getIdea ( int i );
 };
 
 

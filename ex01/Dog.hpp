@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 10:09:50 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/04 16:40:37 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:21:42 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,14 @@ private:
     
 public:
     Dog( void );
+    Dog( const Dog& other );
+    Dog& operator=( const Dog& other );
     ~Dog( void );
 
-    void    makeSound( void ) const;
+    void        makeSound( void ) const;
+    void        steIdea( int i, std::string idea );
+    std::string getIdea ( int i );
+
 };
 
 
