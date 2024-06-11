@@ -6,15 +6,16 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:03:18 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/11 14:45:24 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/11 16:12:00 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
-#include <string>
-#include <iostream>
+# include <string>
+# include <iostream>
+# include "ICharacter.hpp"
 
 class AMateria
 {
@@ -31,7 +32,7 @@ public:
 	
 	std::string const& getType( void ) const; //Returns the materia type
 	virtual AMateria* clone( void ) const = 0;
-	// virtual void use( ICharacter& target );
+	virtual void use( ICharacter& target );
 };
 
 AMateria::AMateria( std::string const & type )

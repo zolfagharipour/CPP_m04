@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 14:30:43 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/11 14:38:51 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/11 16:27:34 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
 
 	std::string	getName( void ) const;
 	AMateria*	clone( void ) const;
+	void use( ICharacter& target );
 };
 
 Cure::Cure( std::string name ) : AMateria("cure")
@@ -38,6 +39,7 @@ Cure::Cure( std::string name ) : AMateria("cure")
 
 Cure::Cure( const Cure& other ) : AMateria("cure")
 {
+	std::cout << "Cure has been created." << std::endl;
 	*this = other;
 }
 
@@ -66,6 +68,10 @@ AMateria*	Cure::clone( void ) const
 	return (ice);
 }
 
+void	Cure::use( ICharacter& target )
+{
+	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
+}
 
 
 #endif

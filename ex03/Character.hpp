@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 14:48:44 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/11 15:38:32 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/11 17:00:21 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Character : public ICharacter
 {
 private:
 	AMateria*	_materia;
-	int			_index;
+	bool		_index[4];
 	std::string	_name;
 	
 public:
@@ -27,17 +27,24 @@ public:
 	Character( const Character& other );
 	Character& operator=( const Character& other );
 	~Character();
+
+	std::string const & getName( void ) const;
+	void equip( AMateria* m );
+	void unequip( int idx );
+	void use( int idx, ICharacter& target );
 };
 
 Character::Character( std::string name )
 {
 	std::cout << "Character " << name << " has been created." << std::endl;
 	_name = name;
-	_index = -1;
+	for (int i = 0; i < 4; i++)
+		_index[i] = 0;
 }
 
 Character::Character( const Character& other )
 {
+	std::cout << "Character " << other._name << " has been created." << std::endl;
 	*this = other;
 }
 
@@ -46,28 +53,59 @@ Character& Character::operator=( const Character& other )
 	if (this == &other)
 		return (*this);
 	this->_name = other._name;
-	while(this->_index >= 0)
+	for (int i = 0; i < 4; i++)
 	{
-		delete (&this->_materia[_index]);
-		_index--;
-	}	
-	while (this->_index <= other._index)
-	{
-		this->_materia[this->_index] = other._materia[other._index];
-		this->_index++;
+		if (_index[i])
+			delete (&_materia[i]);
 	}
-	this->_index--;
+	for (int i = 0; i < 4; i++)
+	{
+		_index[i] = other._index[i];
+		if (_index[i])
+			_materia[i] = other._materia[i];
+	}
 	return (*this);
 }
 
 Character::~Character()
 {
 	std::cout << "Character " << _name << " has been destroyed." << std::endl;
-	while (_index >= 0)
+	for (int i = 0; i < 4; i++)
 	{
-		delete (&_materia[_index]);
-		_index--;
+		if (_index[i])
+			delete (&_materia[i]);
 	}
+}
+
+
+std::string const& Character::getName( void ) const
+{
+	return (_name);
+}
+
+void Character::equip( AMateria* m )
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (_index[i])
+		{
+			_materia[i] = *m;
+			return ;
+		}
+	}
+}
+
+void Character::unequip( int idx )
+{
+	if (!_index[idx])
+	{
+		
+	}
+}
+
+void Character::use( int idx, ICharacter& target )
+{
+
 }
 
 
