@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 14:46:06 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/11 15:17:07 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/13 14:44:26 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

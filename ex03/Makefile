@@ -6,14 +6,14 @@
 #    By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 12:06:03 by mzolfagh          #+#    #+#              #
-#    Updated: 2024/05/26 20:44:39 by mzolfagh         ###   ########.fr        #
+#    Updated: 2024/06/13 14:42:29 by mzolfagh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = DiamondTrap
+NAME = Materia
 
-SRCS =  ClapTrap.cpp main.cpp FragTrap.cpp ScavTrap.cpp
+SRCS =  AMateria.cpp	Character.cpp	Cure.cpp	Ice.cpp	main.cpp	MateriaSource.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
