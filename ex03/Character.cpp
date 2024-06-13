@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:38:29 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/13 14:38:53 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/13 16:55:56 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void Character::equip( AMateria* m )
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (_slot[i])
+		if (!_slot[i])
 		{
 			_slot[i] = m;
 			return ;
@@ -78,6 +78,6 @@ void Character::unequip( int idx )
 
 void Character::use( int idx, ICharacter& target )
 {
-	if (_slot[idx])
+	if (idx >= 0 && idx < 4 && _slot[idx])
 		_slot[idx]->use(target);
 }
