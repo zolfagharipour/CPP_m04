@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 14:48:44 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/11 17:00:21 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/12 16:48:49 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Character : public ICharacter
 {
 private:
-	AMateria*	_materia;
+	AMateria*	_materia[4];
 	bool		_index[4];
 	std::string	_name;
 	
@@ -97,15 +97,16 @@ void Character::equip( AMateria* m )
 
 void Character::unequip( int idx )
 {
-	if (!_index[idx])
+	if (_index[idx])
 	{
-		
+		_index[idx] = 0;
 	}
 }
 
 void Character::use( int idx, ICharacter& target )
 {
-
+	if (_index[idx])
+		_materia[idx].use(target);
 }
 
 
