@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:41:20 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/13 14:41:32 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/15 12:19:41 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,16 @@ MateriaSource::~MateriaSource( void )
 	for (int i = 0; i < 4; i++)
 	{
 		if(_materia[i])
+		{
+			for (int j = i + 1; j < 4; j++)
+			{
+				if (&_materia[j] == &_materia[i])
+					_materia[j] = NULL;
+			}
 			delete (_materia[i]);
+		}
 	}
-} 
+}
 
 void	MateriaSource::learnMateria( AMateria* materia )
 {

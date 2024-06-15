@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:39:41 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/13 16:28:34 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/14 13:37:03 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ Ice& Ice::operator=( const Ice& other )
 Ice::~Ice( void )
 {
 	std::cout << "Ice has been destroyed." << std::endl;
-	
 }
 
 std::string	Ice::getName( void ) const

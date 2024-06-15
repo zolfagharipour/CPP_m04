@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 09:44:13 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/07 18:13:12 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/15 12:36:26 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,17 @@ int main()
     Cat tmp1 = *cat;
     Cat tmp2(*cat);
     
-    std::cout << "First cat idea #1\t" << cat->getIdea(0) << '\n';
-    std::cout << "tmp1 cat idea #1\t" << tmp1.getIdea(0) << '\n';
-    std::cout << "tmp2 cat idea #1\t" << tmp2.getIdea(0) << '\n';
+    std::cout << "First cat idea #1\t" << cat->getIdea(10) << '\n';
+    std::cout << "tmp1 cat idea #1\t" << tmp1.getIdea(10) << '\n';
+    std::cout << "tmp2 cat idea #1\t" << tmp2.getIdea(10) << '\n';
     
-    cat->steIdea(0, "learn CPP");
-    tmp1.steIdea(0, "learn Classes");
-    tmp2.steIdea(0, "learn Polymorphism");
+    cat->steIdea(10, "learn CPP");
+    tmp1.steIdea(10, "learn Classes");
+    tmp2.steIdea(10, "learn Polymorphism");
     
-    std::cout << "First cat idea #1\t" << cat->getIdea(0) << '\n';
-    std::cout << "tmp1 cat idea #1\t" << tmp1.getIdea(0) << '\n';
-    std::cout << "tmp2 cat idea #1\t" << tmp2.getIdea(0) << '\n';
+    std::cout << "First cat idea #1\t" << cat->getIdea(10) << '\n';
+    std::cout << "tmp1 cat idea #1\t" << tmp1.getIdea(10) << '\n';
+    std::cout << "tmp2 cat idea #1\t" << tmp2.getIdea(10) << '\n';
 
     delete cat;
 }

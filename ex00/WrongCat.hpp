@@ -6,12 +6,12 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:24:35 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/04 16:05:24 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/15 12:20:17 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGCAT_HPP
-# define WRONG_HPP
+# define WRONGCAT_HPP
 
 # include "WrongAnimal.hpp"
 

@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:38:29 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/06/13 16:55:56 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/14 13:27:36 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ Character::Character( std::string name )
 Character::Character( const Character& other )
 {
 	std::cout << "Character " << other._name << " has been created." << std::endl;
+	for (int i = 0; i < 4; i++)
+		_slot[i] = NULL;
 	*this = other;
 }
 
@@ -35,7 +37,10 @@ Character& Character::operator=( const Character& other )
 	for (int i = 0; i < 4; i++)
 	{
 		if (_slot[i])
+		{
 			delete (_slot[i]);
+			_slot[i] = NULL;
+		}
 		if (other._slot[i])
 			_slot[i] = other._slot[i];
 	}
